@@ -5,7 +5,7 @@ spring:
     import: "configserver:"
   cloud:
     config:
-      uri: http://localhost:9000
+      uri: http://config.platform:9000
       fail-fast: true
       retry:
         initial-interval: 1000
