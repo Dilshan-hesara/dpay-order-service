@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: order-service
+  config:
+    import: "configserver:"
+  cloud:
+    config:
+      uri: http://localhost:9000
+      fail-fast: true
+      retry:
+        initial-interval: 1000
+        max-interval: 5000
+        max-attempts: 6
+
+server:
+  servlet:
+    session:
+      persistent: false
